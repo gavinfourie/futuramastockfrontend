@@ -43,8 +43,7 @@ export default {
   axios: {
     BaseURL: process.env.API_URL,
     headers: {
-      'Content-Type': 'application/json',
-      'Content-Type': 'multipart/form-data'
+      'Content-Type': 'application/json'
     },
   },
 
