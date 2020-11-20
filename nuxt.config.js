@@ -36,15 +36,19 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    '@nuxtjs/proxy'
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {
-    BaseURL: process.env.API_URL,
     headers: {
       'Content-Type': 'application/json'
     },
+  },
+
+  proxy: {
+    '/api': { target: process.env.API_URL, pathRewrite: {'^/api': ''}}
   },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
