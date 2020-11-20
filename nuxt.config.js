@@ -41,7 +41,7 @@ export default {
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {
-    BaseURL: 'https://futuramabe.herokuapp.com',
+    BaseURL: 'https://futuramabe.herokuapp.com/',
     headers: {
       'Content-Type': 'application/json'
     },
