@@ -41,7 +41,7 @@ export default {
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {
-    BaseURL: API_URL,
+    BaseURL: process.env.API_URL,
     headers: {
       'Content-Type': 'application/json'
     },
