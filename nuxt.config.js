@@ -43,7 +43,6 @@ export default {
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {
     headers: {
-      'Content-Type': 'application/json',
       'Access-Control-Allow-Origin': 'https://futuramastock.herokuapp.com, http://futuramastock.herokuapp.com'
     },
   },
