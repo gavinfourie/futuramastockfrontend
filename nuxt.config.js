@@ -43,13 +43,12 @@ export default {
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {
     headers: {
-      'Content-Type': 'application/json, application/xml',
-      'Access-Control-Allow-Origin': 'http://futuramastock.herokuapp.com, https://futuramastock.herokuapp.com'
+      'Content-Type': 'application/json',
     },
   },
 
   proxy: {
-    '/api': { target: process.env.API_URL, pathRewrite: {'^/api': ''}, changeOrigin: true }
+    '/api': { target: process.env.API_URL, pathRewrite: {'^/api': ''} }
   },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
