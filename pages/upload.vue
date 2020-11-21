@@ -43,7 +43,6 @@ export default {
       try {
         this.textLoading = true
         this.text = 'Uploading...'
-        this.$axios.setHeader('Access-Control-Allow-Origin', 'https://futuramastock.herokuapp.com, http://futuramastock.herokuapp.com')
         await this.$axios.$post('/upload/excel', formData).catch(function (e) {
           throw new Error(e)
         })
