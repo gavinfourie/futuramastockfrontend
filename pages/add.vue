@@ -72,7 +72,7 @@ export default {
   },
   methods: {
     async onSubmit () {
-      if (sku == null || description == null || stock == null) {
+      if (this.sku == null || this.description == null || this.stock == null) {
         this.textLoading = true
         this.text = 'Please populate as many fields as possible!'
       } else {
