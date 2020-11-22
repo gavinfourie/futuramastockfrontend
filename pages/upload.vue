@@ -3,7 +3,7 @@
     <form enctype="multipart/form-data" @submit.prevent="onSubmit">
       <div class="fields flex flex-col">
         <label class="py-4 text-xl font-bold">Upload File</label>
-        <input ref="file" type="file" @change="onSelect"></input>
+        <input ref="file" type="file" name="excelFile" @change="onSelect"></input>
       </div>
       <div class="fields py-4 flex flex-row space-x-4">
         <button type="submit" class="shadow bg-black hover:bg-green-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded">
