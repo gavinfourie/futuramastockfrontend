@@ -84,6 +84,7 @@ export default {
           this.text = 'Failed'
         }
       } else {
+        this.textLoading = true
         this.text = 'Please populate as many fields as possible!'
       }
     }
