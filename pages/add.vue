@@ -72,7 +72,10 @@ export default {
   },
   methods: {
     async onSubmit () {
-      if (sku !== null && description !== null && stock !== null) {
+      if (sku == null || description == null || stock == null) {
+        this.textLoading = true
+        this.text = 'Please populate as many fields as possible!'
+      } else {
         try {
           this.textLoading = true
           this.text = 'Uploading...'
@@ -83,9 +86,6 @@ export default {
         } catch (error) {
           this.text = 'Failed'
         }
-      } else {
-        this.textLoading = true
-        this.text = 'Please populate as many fields as possible!'
       }
     }
   }
