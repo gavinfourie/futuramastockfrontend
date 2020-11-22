@@ -17,9 +17,6 @@
     <h1 v-if="textLoading">
       {{ text }}
     </h1>
-    <button @click="deleteAll">
-      Delete all
-    </button>
   </div>
 </template>
 

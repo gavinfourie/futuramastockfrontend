@@ -60,8 +60,8 @@
 export default {
   data () {
     return {
-      sku: '',
-      description: '',
+      sku: null,
+      description: null,
       stock: null,
       price: null,
       alt: '',
@@ -72,15 +72,19 @@ export default {
   },
   methods: {
     async onSubmit () {
-      try {
-        this.textLoading = true
-        this.text = 'Uploading...'
-        await this.$axios.$post('/stockcheck/addsingle', {
-          sku: this.sku, description: this.description, quantity: this.stock, price: this.price, eta: this.eta, alt: this.alt
-        })
-        this.text = 'Success!'
-      } catch (error) {
-        this.text = 'Failed'
+      if (sku !== null && description !== null && stock !== null) {
+        try {
+          this.textLoading = true
+          this.text = 'Uploading...'
+          await this.$axios.$post('/stockcheck/addsingle', {
+            sku: this.sku, description: this.description, quantity: this.stock, price: this.price, eta: this.eta, alt: this.alt
+          })
+          this.text = 'Success!'
+        } catch (error) {
+          this.text = 'Failed'
+        }
+      } else {
+        this.text = 'Please populate as many fields as possible!'
       }
     }
   }
