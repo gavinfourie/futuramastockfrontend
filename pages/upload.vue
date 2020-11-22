@@ -39,7 +39,7 @@ export default {
     },
     async onSubmit () {
       const formData = new FormData()
-      formData.append('file', this.file)
+      formData.append('excelFile', this.file)
       try {
         this.textLoading = true
         this.text = 'Uploading...'
